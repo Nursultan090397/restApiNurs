@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/company")
+@RequestMapping("/api/company")
 @RequiredArgsConstructor
 public class CompanyController {
 
@@ -21,7 +21,7 @@ public class CompanyController {
         return companyService.getAllCompanies();
     }
 
-    @PostMapping("/save")
+    @PostMapping()
     public CompanyResponse saveCompany(@RequestBody CompanyRequest companyRequest) throws IOException {
         return companyService.addCompany(companyRequest);
     }
